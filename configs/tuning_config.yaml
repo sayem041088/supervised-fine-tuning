@@ -1,0 +1,21 @@
+# Vertex AI Supervised Fine-Tuning (SFT) Configuration
+gcp:
+  project_id: ${PROJECT_ID}
+  region: us-central1
+  bucket_name: ${BUCKET_NAME}
+
+tuning:
+  base_model: gemini-2.5-flash
+  tuned_model_display_name: gemini-flash-wikilingua-summarizer
+  # Hyperparameter tuning options (defaults to Vertex AI automatic tuning)
+  epochs: null
+  learning_rate_multiplier: null
+  adapter_size: null
+
+data:
+  raw_train_path: data/raw/sft_train_samples.jsonl
+  raw_val_path: data/raw/sft_val_samples.jsonl
+  raw_test_path: data/raw/sft_test_samples.csv
+  processed_train_path: data/processed/train_gemini.jsonl
+  processed_val_path: data/processed/val_gemini.jsonl
+  gcs_dataset_prefix: datasets

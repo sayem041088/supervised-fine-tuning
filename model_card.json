@@ -1,0 +1,20 @@
+{
+  "model_name": "gemini-flash-wikilingua-summarizer",
+  "base_model": "gemini-2.5-flash",
+  "task": "Article Summarization",
+  "dataset": "WikiLingua (English)",
+  "training_samples": 500,
+  "validation_samples": 100,
+  "metrics": {
+    "baseline_rouge_l": 0.23953901190808397,
+    "tuned_rouge_l": 0.2384880155341468,
+    "improvement_percent": -0.43875791486542753
+  },
+  "training_date": "2026-09-21",
+  "recommended_config": {
+    "temperature": 0.1,
+    "max_output_tokens": 194,
+    "top_p": 0.8
+  },
+  "notes": "Fine-tuned for WikiLingua-style article summarization"
+}

@@ -1,0 +1,9 @@
+# Evaluation and Generation Configuration
+evaluation:
+  temperature: 0.1
+  max_output_tokens: 194
+  top_p: 0.8
+  metrics:
+    - rouge1
+    - rouge2
+    - rougeL
